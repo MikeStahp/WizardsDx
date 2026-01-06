@@ -53,10 +53,10 @@ public class WizardArmors {
                 ArmorItem.Type.LEGGINGS, protectionLegs,
                 ArmorItem.Type.BOOTS, protectionFeet),
                 enchantability, equipSound, repairIngredient,
-                List.of(new ArmorMaterial.Layer(Identifier.of(WizardsMod.ID, name))),
+                List.of(new ArmorMaterial.Layer(new Identifier(WizardsMod.ID, name))),
                 0,0
                 );
-        return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(WizardsMod.ID, name), material);
+        return Registry.registerReference(Registries.ARMOR_MATERIAL, new Identifier(WizardsMod.ID, name), material);
     }
 
     public static RegistryEntry<ArmorMaterial> material_wizard = material(
@@ -130,7 +130,7 @@ public class WizardArmors {
 
     public static final Armor.Set wizardRobeSet = create(
             material_wizard,
-            Identifier.of(WizardsMod.ID, "wizard_robe"),
+            new Identifier(WizardsMod.ID, "wizard_robe"),
             10,
             WizardArmor::new,
             ArmorSetConfig.with(
@@ -155,7 +155,7 @@ public class WizardArmors {
 
     public static final Armor.Set arcaneRobeSet = create(
             material_arcane,
-            Identifier.of(WizardsMod.ID, "arcane_robe"),
+            new Identifier(WizardsMod.ID, "arcane_robe"),
             20,
             WizardArmor::new,
             ArmorSetConfig.with(
@@ -184,7 +184,7 @@ public class WizardArmors {
 
     public static final Armor.Set fireRobeSet = create(
             material_fire,
-            Identifier.of(WizardsMod.ID, "fire_robe"),
+            new Identifier(WizardsMod.ID, "fire_robe"),
             20,
             WizardArmor::new,
             ArmorSetConfig.with(
@@ -213,7 +213,7 @@ public class WizardArmors {
 
     public static final Armor.Set frostRobeSet = create(
             material_frost,
-            Identifier.of(WizardsMod.ID, "frost_robe"),
+            new Identifier(WizardsMod.ID, "frost_robe"),
             20,
             WizardArmor::new,
             ArmorSetConfig.with(
@@ -243,7 +243,7 @@ public class WizardArmors {
 
     public static final Armor.Set netherite_arcane = create(
             material_netherite_arcane,
-            Identifier.of(WizardsMod.ID, "netherite_arcane_robe"),
+            new Identifier(WizardsMod.ID, "netherite_arcane_robe"),
             30,
             WizardArmor::new,
             ArmorSetConfig.with(
@@ -272,7 +272,7 @@ public class WizardArmors {
 
     public static final Armor.Set netherite_fire = create(
             material_netherite_fire,
-            Identifier.of(WizardsMod.ID, "netherite_fire_robe"),
+            new Identifier(WizardsMod.ID, "netherite_fire_robe"),
             30,
             WizardArmor::new,
             ArmorSetConfig.with(
@@ -301,7 +301,7 @@ public class WizardArmors {
 
     public static final Armor.Set netherite_frost = create(
             material_netherite_frost,
-            Identifier.of(WizardsMod.ID, "netherite_frost_robe"),
+            new Identifier(WizardsMod.ID, "netherite_frost_robe"),
             30,
             WizardArmor::new,
             ArmorSetConfig.with(

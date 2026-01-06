@@ -17,7 +17,6 @@ atlassian-ide-plugin.xml
 *.class
 
 # Log file
-*.log
 
 # BlueJ files
 *.ctxt

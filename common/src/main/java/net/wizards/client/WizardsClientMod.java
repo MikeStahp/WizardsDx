@@ -22,13 +22,13 @@ import java.util.function.Supplier;
 public class WizardsClientMod {
     public static void init() {
         CustomModels.registerModelIds(List.of(
-                Identifier.of(WizardsMod.ID, "projectile/arcane_bolt"),
-                Identifier.of(WizardsMod.ID, "projectile/arcane_missile"),
-                Identifier.of(WizardsMod.ID, "projectile/fireball"),
-                Identifier.of(WizardsMod.ID, "projectile/fire_blast"),
-                Identifier.of(WizardsMod.ID, "projectile/fire_meteor"),
-                Identifier.of(WizardsMod.ID, "projectile/frost_shard"),
-                Identifier.of(WizardsMod.ID, "projectile/frostbolt"),
+                new Identifier(WizardsMod.ID, "projectile/arcane_bolt"),
+                new Identifier(WizardsMod.ID, "projectile/arcane_missile"),
+                new Identifier(WizardsMod.ID, "projectile/fireball"),
+                new Identifier(WizardsMod.ID, "projectile/fire_blast"),
+                new Identifier(WizardsMod.ID, "projectile/fire_meteor"),
+                new Identifier(WizardsMod.ID, "projectile/frost_shard"),
+                new Identifier(WizardsMod.ID, "projectile/frostbolt"),
                 ArcaneChargeRenderer.modelId,
                 FrozenRenderer.modelId,
                 FrostShieldRenderer.modelId_base,

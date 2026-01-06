@@ -1,0 +1,3 @@
+Starting a Gradle Daemon, 2 busy and 4 incompatible and 1 stopped Daemons could not be reused, use --status for details
+
+[Incubating] Problems report is available at: file:///C:/Users/PCGAMER/Documents/GitHub/WizardsDx/build/reports/problems/problems-report.html

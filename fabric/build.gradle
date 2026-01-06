@@ -68,8 +68,6 @@ dependencies {
     common(project(path: ':common', configuration: 'namedElements')) { transitive = false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 
-    modImplementation("dev.kosmx.player-anim:player-animation-lib-${platform}:${project.player_anim_version}")
-    modImplementation("me.shedaniel.cloth:cloth-config-${platform}:${project.cloth_config_version}")
     modImplementation("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.azure_mc_version}:${project.azure_lib_version}")
     modImplementation("maven.modrinth:tiny-config:${project.tiny_config_version}-${platform}")
 
@@ -77,13 +75,9 @@ dependencies {
     modImplementation("dev.emi:trinkets:${project.trinkets_version}")
 
     modImplementation("maven.modrinth:structure-pool-api:${project.structure_pool_api_version}-${platform}")
-//    modImplementation("net.foundation:structure_pool_api-${platform}:${project.structure_pool_api_version}")
-    modImplementation("maven.modrinth:runes:${project.structure_pool_api_version}-${platform}")
-//    modImplementation("net.rpg_series:runes-${platform}:${project.runes_version}")
+    modImplementation("maven.modrinth:runes:${project.runes_version}-${platform}")
     modImplementation("maven.modrinth:spell-power:${project.spell_power_version}-${platform}")
-//    modImplementation("net.spell_power:spell_power-${platform}:${project.spell_power_version}")
     modImplementation("maven.modrinth:spell-engine:${project.spell_engine_version}-${platform}")
-//    modImplementation("net.spell_engine:spell_engine-${platform}:${project.spell_engine_version}")
 }
 
 processResources {

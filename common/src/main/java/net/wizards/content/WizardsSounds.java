@@ -23,7 +23,7 @@ public class WizardsSounds {
         }
 
         public Entry(String name) {
-            this(Identifier.of(WizardsMod.ID, name));
+            this(new Identifier(WizardsMod.ID + ":" + name));
         }
 
         public Entry(Identifier id) {
@@ -55,7 +55,9 @@ public class WizardsSounds {
             return variants;
         }
     }
+
     public static final List<Entry> entries = new ArrayList<>();
+
     public static Entry add(Entry entry) {
         entries.add(entry);
         return entry;
@@ -92,7 +94,7 @@ public class WizardsSounds {
     public static final Entry WIZARD_ROBES_EQUIP = add(new Entry("wizard_robes_equip").variants(3));
 
     public static void register() {
-        for (var entry: entries) {
+        for (var entry : entries) {
             entry.entry = Registry.registerReference(Registries.SOUND_EVENT, entry.id(), entry.soundEvent());
         }
     }
