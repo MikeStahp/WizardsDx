@@ -6,9 +6,9 @@ import net.spell_engine.client.gui.SpellTooltip;
 import net.wizards.content.spells.ArcaneSpells;
 import net.wizards.content.spells.FireSpells;
 import net.wizards.content.spells.FrostSpells;
+import net.wizards.content.spells.SpellHelpers;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,48 +22,42 @@ public class WizardSpells {
 
         /**
          * Represents a spell entry with its metadata.
+         * 
+         * @deprecated Use {@link SpellHelpers.Entry} instead
          */
+        @Deprecated
         public record Entry(Identifier id, Spell spell, String title, String description,
                         @Nullable SpellTooltip.DescriptionMutator mutator) {
         }
 
         /**
-         * List of all registered spell entries.
+         * Returns the list of all registered spell entries.
          */
-        public static final List<Entry> entries = new ArrayList<>();
-
-        /**
-         * Registers a spell entry and returns it.
-         * 
-         * @param entry The spell entry to register
-         * @return The registered entry
-         */
-        public static Entry add(Entry entry) {
-                entries.add(entry);
-                return entry;
+        public static List<SpellHelpers.Entry> getEntries() {
+                return SpellHelpers.entries;
         }
 
         // ========== ARCANE SPELLS ==========
-        public static Entry arcane_bolt = ArcaneSpells.arcane_bolt;
-        public static Entry arcane_blast = ArcaneSpells.arcane_blast;
-        public static Entry arcane_missile = ArcaneSpells.arcane_missile;
-        public static Entry arcane_beam = ArcaneSpells.arcane_beam;
-        public static Entry arcane_blink = ArcaneSpells.arcane_blink;
+        public static SpellHelpers.Entry arcane_bolt = ArcaneSpells.arcane_bolt;
+        public static SpellHelpers.Entry arcane_blast = ArcaneSpells.arcane_blast;
+        public static SpellHelpers.Entry arcane_missile = ArcaneSpells.arcane_missile;
+        public static SpellHelpers.Entry arcane_beam = ArcaneSpells.arcane_beam;
+        public static SpellHelpers.Entry arcane_blink = ArcaneSpells.arcane_blink;
 
         // ========== FIRE SPELLS ==========
-        public static Entry fire_scorch = FireSpells.fire_scorch;
-        public static Entry fireball = FireSpells.fireball;
-        public static Entry fire_blast = FireSpells.fire_blast;
-        public static Entry fire_breath = FireSpells.fire_breath;
-        public static Entry fire_meteor = FireSpells.fire_meteor;
-        public static Entry fire_wall = FireSpells.fire_wall;
+        public static SpellHelpers.Entry fire_scorch = FireSpells.fire_scorch;
+        public static SpellHelpers.Entry fireball = FireSpells.fireball;
+        public static SpellHelpers.Entry fire_blast = FireSpells.fire_blast;
+        public static SpellHelpers.Entry fire_breath = FireSpells.fire_breath;
+        public static SpellHelpers.Entry fire_meteor = FireSpells.fire_meteor;
+        public static SpellHelpers.Entry fire_wall = FireSpells.fire_wall;
 
         // ========== FROST SPELLS ==========
-        public static Entry frost_shard = FrostSpells.frost_shard;
-        public static Entry frostbolt = FrostSpells.frostbolt;
-        public static Entry frost_nova = FrostSpells.frost_nova;
-        public static Entry frost_shield = FrostSpells.frost_shield;
-        public static Entry frost_blizzard = FrostSpells.frost_blizzard;
+        public static SpellHelpers.Entry frost_shard = FrostSpells.frost_shard;
+        public static SpellHelpers.Entry frostbolt = FrostSpells.frostbolt;
+        public static SpellHelpers.Entry frost_nova = FrostSpells.frost_nova;
+        public static SpellHelpers.Entry frost_shield = FrostSpells.frost_shield;
+        public static SpellHelpers.Entry frost_blizzard = FrostSpells.frost_blizzard;
 
         /**
          * Initializes all spells. Call this during mod initialization.
