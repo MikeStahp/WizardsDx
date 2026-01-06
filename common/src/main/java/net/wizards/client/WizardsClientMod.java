@@ -22,18 +22,17 @@ import java.util.function.Supplier;
 public class WizardsClientMod {
     public static void init() {
         CustomModels.registerModelIds(List.of(
-                new Identifier(WizardsMod.ID, "projectile/arcane_bolt"),
-                new Identifier(WizardsMod.ID, "projectile/arcane_missile"),
-                new Identifier(WizardsMod.ID, "projectile/fireball"),
-                new Identifier(WizardsMod.ID, "projectile/fire_blast"),
-                new Identifier(WizardsMod.ID, "projectile/fire_meteor"),
-                new Identifier(WizardsMod.ID, "projectile/frost_shard"),
-                new Identifier(WizardsMod.ID, "projectile/frostbolt"),
+                new Identifier(WizardsMod.ID + ":projectile/arcane_bolt"),
+                new Identifier(WizardsMod.ID + ":projectile/arcane_missile"),
+                new Identifier(WizardsMod.ID + ":projectile/fireball"),
+                new Identifier(WizardsMod.ID + ":projectile/fire_blast"),
+                new Identifier(WizardsMod.ID + ":projectile/fire_meteor"),
+                new Identifier(WizardsMod.ID + ":projectile/frost_shard"),
+                new Identifier(WizardsMod.ID + ":projectile/frostbolt"),
                 ArcaneChargeRenderer.modelId,
                 FrozenRenderer.modelId,
                 FrostShieldRenderer.modelId_base,
-                FrostShieldRenderer.modelId_overlay
-        ));
+                FrostShieldRenderer.modelId_overlay));
 
         CustomModelStatusEffect.register(WizardsEffects.arcaneCharge.effect, new ArcaneChargeRenderer());
         CustomParticleStatusEffect.register(WizardsEffects.frostSlowness.effect, new FrozenParticles(1));
