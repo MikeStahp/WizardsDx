@@ -1,13 +1,20 @@
 package net.wizards.content.spells;
 
+import net.minecraft.util.Identifier;
 import net.spell_engine.api.spell.Spell;
 import net.spell_engine.api.spell.fx.ParticleBatch;
+import net.spell_engine.client.gui.SpellTooltip;
 import net.spell_engine.client.util.Color;
 import net.spell_engine.fx.SpellEngineParticles;
 import net.spell_power.api.SpellSchools;
+import net.wizards.WizardsMod;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Shared helper methods and constants for spell creation.
+ * Shared helper methods, constants, and base Entry type for spell creation.
  */
 public class SpellHelpers {
     public static final String PRIMARY_GROUP = "primary";
@@ -15,6 +22,33 @@ public class SpellHelpers {
     public static final Color ARCANE_COLOR = Color.from(SpellSchools.ARCANE.color);
     public static final Color FIRE_COLOR = Color.from(SpellSchools.FIRE.color);
     public static final Color FROST_COLOR = Color.from(SpellSchools.FROST.color);
+
+    /**
+     * Represents a spell entry with its metadata.
+     */
+    public record Entry(Identifier id, Spell spell, String title, String description,
+            @Nullable SpellTooltip.DescriptionMutator mutator) {
+    }
+
+    /**
+     * List of all registered spell entries.
+     */
+    public static final List<Entry> entries = new ArrayList<>();
+
+    /**
+     * Registers a spell entry and returns it.
+     * 
+     * @param entry The spell entry to register
+     * @return The registered entry
+     */
+    public static Entry add(Entry entry) {
+        entries.add(entry);
+        return entry;
+    }
+
+    public static Identifier id(String name) {
+        return new Identifier(WizardsMod.ID + ":" + name);
+    }
 
     public static Spell activeSpellBase() {
         var spell = new Spell();

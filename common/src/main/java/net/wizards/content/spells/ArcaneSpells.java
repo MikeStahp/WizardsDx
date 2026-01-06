@@ -9,7 +9,6 @@ import net.spell_engine.fx.SpellEngineParticles;
 import net.spell_engine.fx.SpellEngineSounds;
 import net.spell_power.api.SpellSchools;
 import net.wizards.WizardsMod;
-import net.wizards.content.WizardSpells;
 import net.wizards.content.WizardsSounds;
 import net.wizards.effect.WizardsEffects;
 
@@ -22,10 +21,10 @@ import static net.wizards.content.spells.SpellHelpers.*;
  */
 public class ArcaneSpells {
 
-    public static WizardSpells.Entry arcane_bolt = WizardSpells.add(arcane_bolt());
+    public static Entry arcane_bolt = add(arcane_bolt());
 
-    private static WizardSpells.Entry arcane_bolt() {
-        var id = new Identifier(WizardsMod.ID + ":arcane_bolt");
+    private static Entry arcane_bolt() {
+        var id = id("arcane_bolt");
         var spell = activeSpellBase();
         spell.school = SpellSchools.ARCANE;
         spell.group = PRIMARY_GROUP;
@@ -80,13 +79,13 @@ public class ArcaneSpells {
 
         configureArcaneRuneCost(spell);
 
-        return new WizardSpells.Entry(id, spell, "", "", null);
+        return new Entry(id, spell, "", "", null);
     }
 
-    public static WizardSpells.Entry arcane_blast = WizardSpells.add(arcane_blast());
+    public static Entry arcane_blast = add(arcane_blast());
 
-    private static WizardSpells.Entry arcane_blast() {
-        var id = new Identifier(WizardsMod.ID + ":arcane_blast");
+    private static Entry arcane_blast() {
+        var id = id("arcane_blast");
         var spell = SpellBuilder.createSpellActive();
         spell.school = SpellSchools.ARCANE;
         spell.group = PRIMARY_GROUP;
@@ -135,13 +134,13 @@ public class ArcaneSpells {
 
         configureArcaneRuneCost(spell);
 
-        return new WizardSpells.Entry(id, spell, "", "", null);
+        return new Entry(id, spell, "", "", null);
     }
 
-    public static WizardSpells.Entry arcane_missile = WizardSpells.add(arcane_missile());
+    public static Entry arcane_missile = add(arcane_missile());
 
-    private static WizardSpells.Entry arcane_missile() {
-        var id = new Identifier(WizardsMod.ID + ":arcane_missile");
+    private static Entry arcane_missile() {
+        var id = id("arcane_missile");
         var spell = SpellBuilder.createSpellActive();
         spell.school = SpellSchools.ARCANE;
         spell.tier = 2;
@@ -214,13 +213,13 @@ public class ArcaneSpells {
         SpellBuilder.Cost.cooldown(spell, 2);
         spell.cost.cooldown.proportional = true;
 
-        return new WizardSpells.Entry(id, spell, "", "", null);
+        return new Entry(id, spell, "", "", null);
     }
 
-    public static WizardSpells.Entry arcane_beam = WizardSpells.add(arcane_beam());
+    public static Entry arcane_beam = add(arcane_beam());
 
-    private static WizardSpells.Entry arcane_beam() {
-        var id = new Identifier(WizardsMod.ID + ":arcane_beam");
+    private static Entry arcane_beam() {
+        var id = id("arcane_beam");
         var spell = SpellBuilder.createSpellActive();
         spell.school = SpellSchools.ARCANE;
         spell.tier = 3;
@@ -311,13 +310,13 @@ public class ArcaneSpells {
         SpellBuilder.Cost.cooldown(spell, 10);
         spell.cost.cooldown.proportional = true;
 
-        return new WizardSpells.Entry(id, spell, "", "", null);
+        return new Entry(id, spell, "", "", null);
     }
 
-    public static WizardSpells.Entry arcane_blink = WizardSpells.add(arcane_blink());
+    public static Entry arcane_blink = add(arcane_blink());
 
-    private static WizardSpells.Entry arcane_blink() {
-        var id = new Identifier(WizardsMod.ID + ":arcane_blink");
+    private static Entry arcane_blink() {
+        var id = id("arcane_blink");
         var spell = SpellBuilder.createSpellActive();
         spell.school = SpellSchools.ARCANE;
         spell.tier = 4;
@@ -360,7 +359,7 @@ public class ArcaneSpells {
         configureArcaneRuneCost(spell);
         SpellBuilder.Cost.cooldown(spell, 12);
 
-        return new WizardSpells.Entry(id, spell, "", "", null);
+        return new Entry(id, spell, "", "", null);
     }
 
     /**
