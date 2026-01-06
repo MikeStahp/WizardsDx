@@ -42,6 +42,7 @@ repositories {
     maven { url 'https://maven.kosmx.dev/' }
     maven { url 'https://maven.shedaniel.me/' }
     maven { url 'https://maven.azuredoom.com/mods' }
+    maven { url 'https://jitpack.io' }  // For TinyConfig on 1.20.1
     maven {
         name = 'Modrinth'
         url = 'https://api.modrinth.com/maven'
@@ -69,7 +70,8 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 
     modImplementation("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.azure_mc_version}:${project.azure_lib_version}")
-    modImplementation("maven.modrinth:tiny-config:${project.tiny_config_version}-${platform}")
+    // TinyConfig from JitPack for 1.20.1 (Modrinth version only supports 1.21+)
+    include(implementation("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}"))
 
     // Trinkets
     modImplementation("dev.emi:trinkets:${project.trinkets_version}")
