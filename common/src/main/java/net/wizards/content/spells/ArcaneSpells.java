@@ -25,7 +25,7 @@ public class ArcaneSpells {
     public static WizardSpells.Entry arcane_bolt = WizardSpells.add(arcane_bolt());
 
     private static WizardSpells.Entry arcane_bolt() {
-        var id = new Identifier(WizardsMod.ID, "arcane_bolt");
+        var id = new Identifier(WizardsMod.ID + ":arcane_bolt");
         var spell = activeSpellBase();
         spell.school = SpellSchools.ARCANE;
         spell.group = PRIMARY_GROUP;
@@ -86,7 +86,7 @@ public class ArcaneSpells {
     public static WizardSpells.Entry arcane_blast = WizardSpells.add(arcane_blast());
 
     private static WizardSpells.Entry arcane_blast() {
-        var id = new Identifier(WizardsMod.ID, "arcane_blast");
+        var id = new Identifier(WizardsMod.ID + ":arcane_blast");
         var spell = SpellBuilder.createSpellActive();
         spell.school = SpellSchools.ARCANE;
         spell.group = PRIMARY_GROUP;
@@ -141,7 +141,7 @@ public class ArcaneSpells {
     public static WizardSpells.Entry arcane_missile = WizardSpells.add(arcane_missile());
 
     private static WizardSpells.Entry arcane_missile() {
-        var id = new Identifier(WizardsMod.ID, "arcane_missile");
+        var id = new Identifier(WizardsMod.ID + ":arcane_missile");
         var spell = SpellBuilder.createSpellActive();
         spell.school = SpellSchools.ARCANE;
         spell.tier = 2;
@@ -220,7 +220,7 @@ public class ArcaneSpells {
     public static WizardSpells.Entry arcane_beam = WizardSpells.add(arcane_beam());
 
     private static WizardSpells.Entry arcane_beam() {
-        var id = new Identifier(WizardsMod.ID, "arcane_beam");
+        var id = new Identifier(WizardsMod.ID + ":arcane_beam");
         var spell = SpellBuilder.createSpellActive();
         spell.school = SpellSchools.ARCANE;
         spell.tier = 3;
@@ -317,7 +317,7 @@ public class ArcaneSpells {
     public static WizardSpells.Entry arcane_blink = WizardSpells.add(arcane_blink());
 
     private static WizardSpells.Entry arcane_blink() {
-        var id = new Identifier(WizardsMod.ID, "arcane_blink");
+        var id = new Identifier(WizardsMod.ID + ":arcane_blink");
         var spell = SpellBuilder.createSpellActive();
         spell.school = SpellSchools.ARCANE;
         spell.tier = 4;
@@ -330,7 +330,7 @@ public class ArcaneSpells {
 
         spell.release = new Spell.Release();
         spell.release.animation = "spell_engine:one_handed_area_release";
-        spell.release.sound = new Sound(new Identifier("minecraft", "entity.enderman.teleport"));
+        spell.release.sound = new Sound(new Identifier("minecraft:entity.enderman.teleport"));
 
         var teleport = new Spell.Impact();
         teleport.action = new Spell.Impact.Action();
