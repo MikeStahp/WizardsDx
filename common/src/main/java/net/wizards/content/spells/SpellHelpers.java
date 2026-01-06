@@ -2,10 +2,10 @@ package net.wizards.content.spells;
 
 import net.minecraft.util.Identifier;
 import net.spell_engine.api.spell.Spell;
-import net.spell_engine.api.spell.fx.ParticleBatch;
+import net.spell_engine.particle.ParticleBatch;
 import net.spell_engine.client.gui.SpellTooltip;
 import net.spell_engine.client.util.Color;
-import net.spell_engine.fx.SpellEngineParticles;
+import net.spell_engine.client.effect.SpellEngineParticles;
 import net.spell_power.api.SpellSchools;
 import net.wizards.WizardsMod;
 import org.jetbrains.annotations.Nullable;

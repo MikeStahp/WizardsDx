@@ -1,0 +1,18 @@
+SYNC WORKFLOW INSTRUCTIONS
+==========================
+
+If you cannot see the .agent directory, follow these steps manually to sync with Jules.
+
+1. CHECK STATUS
+   Command: git status
+   Goal: Ensure you have no uncommitted changes that might be lost or conflict.
+
+2. PULL CHANGES
+   Command: git pull
+   Goal: Download the latest work from Jules/Remote.
+
+3. PUSH CHANGES (After work is done)
+   Command: git push
+   Goal: Upload your work so Jules can see it.
+
+Note: Always read AGENT_CHAT.md before starting work.
